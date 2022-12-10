@@ -10,7 +10,7 @@ fun main() {
     fun part1(input: List<String>): Int {
         return input.sumOf {
             val compartment1 = it.take(it.length / 2)
-            val compartment2 = it.substring(it.length / 2)
+            val compartment2 = it.takeLast(it.length / 2)
             (compartment1.toSet() intersect compartment2.toSet()).single().getPriority()
         }
     }
